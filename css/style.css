@@ -145,31 +145,53 @@ footer {
 }
 
 /* Estilos para personajes */
-.character-section {
-    text-align: center;
-}
 
-.character-container {
+.section-principal {
     display: flex;
-    justify-content: center; 
-    gap: 10px; /* Espacio entre las imágenes */  
-    margin-top: 55px; 
+    width: 100%;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ad2828;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
 }
 
-.character-section h2 {
-    font-size: 24px; 
-    color: #ad2828; 
-    margin-bottom: 10px; /* Espacio inferior */
-    margin-top: 55px;
+.section-dos h2{
+    text-align:left;
+    font-size: 20px;
+    color: #a12c2c;
+    margin: 25px;
 }
 
-.character-container .character {
-    text-align: center; 
+.section-dos .galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Espacio entre las imágenes */
+    margin: 30px;
 }
 
-.character-container .character img {
-    width: 200px; 
-    height: 200px;
+.section-dos .galeria .img-container {
+    position: relative;
+}
+
+.section-dos .galeria img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.character-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color:#ad2828;
+    color: white;
+    padding: 5px;
+    margin: 0;
 }
 
 .character-container .character p {
@@ -177,9 +199,89 @@ footer {
     font-family: sans-serif;
     background-color: rgb(168, 31, 31);
 }
+/* Define las ubicaciones en la cuadrícula utilizando nth-child */
+.galeria .img-container:nth-child(1) { grid-area: 1 / 1; }
+.galeria .img-container:nth-child(2) { grid-area: 1 / 2; }
+.galeria .img-container:nth-child(3) { grid-area: 1 / 3; }
+.galeria .img-container:nth-child(4) { grid-area: 1 / 4; }
+.galeria .img-container:nth-child(5) { grid-area: 2 / 1; }
+.galeria .img-container:nth-child(6) { grid-area: 2 / 2; }
+.galeria .img-container:nth-child(7) { grid-area: 2 / 3; }
+.galeria .img-container:nth-child(8) { grid-area: 2 / 4; }
+.galeria .img-container:nth-child(9) { grid-area: 3 / 1; }
+.galeria .img-container:nth-child(10) { grid-area: 3 / 2; }
+.galeria .img-container:nth-child(11) { grid-area: 3 / 3; }
+.galeria .img-container:nth-child(12) { grid-area: 3 / 4; }
+.galeria .img-container:nth-child(13) { grid-area: 4 / 1; }
+.galeria .img-container:nth-child(14) { grid-area: 4 / 2; }
+
+.section-monstruos h2 {
+    text-align: left;
+    font-size: 20px;
+    color: #a12c2c;
+}
+
 
 /* Estilos para la sección de noticias */
+.news-section {
+    padding: 20px;
+}
 
+
+.new-title {
+    color: rgb(168, 31, 31);
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.new-subtitle {
+    color: #a12c2c;
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.new-article {
+    margin-bottom: 40px;
+}
+
+.new-description {
+    color:  #a12c2c;
+    font-size: 16px; 
+}
+
+.new-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+/* Estilos para productos y merchandising */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.product-item {
+    text-align: center;
+    margin: 50px; 
+}
+
+.product-image {
+    width: 200px;
+    height: 200px; 
+}
+
+.buy-button {
+    display: block; 
+    margin-top: 10px; 
+}
 
 /* Estilos para formularios */
 
@@ -255,13 +357,6 @@ input,textarea{
     background-color: rgba(88, 44, 44, 0.301); /*color de fondo con opacidad */
     margin: 30px;
     }
-
-
-    /*max-width: 250px;
-    height: auto;
-    width: 25%;
-    margin: 0 5px;
-*/
 
     .social-media img {
         width: 30px;
