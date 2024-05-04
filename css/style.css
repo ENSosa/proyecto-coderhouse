@@ -8,20 +8,26 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: rgba(13, 12, 12, 1);    
+    background-color: rgba(13, 12, 12, 1);
+    
 }
 
 header {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     height: 90px;
     background-color: black;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
 }
 
 a {
     text-decoration: none;
     color: rgb(168, 31, 31);
+}
+
+nav #toggle, nav label{
+    display: none;
 }
 
 nav a {
@@ -32,24 +38,24 @@ nav a {
 .logo {
     display: flex;
     align-items: center;
+    height: 70px;
 }
 
 .logo img {
     height: 90px;
 }
 
+
 .image-container {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
     justify-content: center;
     margin-top: 55px;
-    gap: 10px;
 }
 
 .image-container img {
-    max-width: 100%;
+    max-width: 250px;
     height: auto;
-    width: 100%;
+    width: 25%;
     margin: 0 5px;
 }
 
@@ -60,7 +66,7 @@ nav a {
     text-align: center;
     margin: auto; 
     margin-bottom: 20px; 
-    margin-top: 50px;
+    margin-top: 55px;
 }
 
 .text {
@@ -68,8 +74,8 @@ nav a {
     font-size: 16px; 
     line-height: 1.9;
     text-align: center;
-    margin: 20px;
-    margin-top: 20px;
+    margin: auto;
+    width: 80%;
 }
 
 footer {
@@ -102,16 +108,18 @@ footer {
 
 .season-info {
     margin-bottom: 40px;
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex; 
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap; 
     margin-top: 55px;
 }
 
 .season-info iframe {
-    width: 100%;
+    display: block; 
+    margin: 50px;
+    width: 400px; 
     height: 200px;
+    margin-bottom: 20px;
 }
 
 .video-info {
@@ -142,10 +150,9 @@ footer {
 }
 
 .character-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-content: center;
-    gap: 10px;
+    display: flex;
+    justify-content: center; 
+    gap: 10px; /* Espacio entre las imágenes */  
     margin-top: 55px; 
 }
 
@@ -172,64 +179,7 @@ footer {
 }
 
 /* Estilos para la sección de noticias */
-.news-section {
-    padding: 20px;
-}
 
-.new-title {
-    color: rgb(168, 31, 31);
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-}
-
-.new-subtitle {
-    color: #a12c2c;
-    font-size: 24px;
-    margin-bottom: 30px;
-    margin-top: 40px;
-}
-
-.new-article {
-    margin-bottom: 40px;
-}
-
-.new-description {
-    color:  #a12c2c;
-    font-size: 16px; 
-}
-
-.new-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 40px;
-}
-
-/* Estilos para productos y merchandising */
-.product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-content: center;
-    gap: 20px;
-}
-
-.product-item {
-    text-align: center;
-}
-
-.product-image {
-    width: 200px;
-    height: 200px; 
-}
-
-.buy-button {
-    display: block; 
-    margin-top: 10px; 
-}
 
 /* Estilos para formularios */
 
@@ -240,7 +190,9 @@ form {
     justify-content: center; 
     padding: 50px;
     box-shadow: 0 0 20px rgba(252, 86, 86, 0.5); /* Añade una sombra para resaltar el formulario */
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -265,15 +217,335 @@ form h2 {
     color: #000000;
 }
 
-input, textarea {
+input,textarea{
     padding: 17px 25px;
     margin-bottom: 20px;
     background-color: beige;
     border: 2px solid#a12c2c
 }
 
+
+/* Estilos para 768px */
+
+
 @media screen and (max-width: 768px) {
     .container {
         padding: 0 20px;
     }
+    .image-container img {
+        max-width: 100%;
+        width: 20%;
+        height: auto;
+    }
+    .title {
+        font-size: 18px;
+        
+    }
+    .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(224, 215, 215, 0.5); /* Añade una sombra para resaltar el formulario */
+    width: 90%;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(88, 44, 44, 0.301); /*color de fondo con opacidad */
+    margin: 30px;
+    }
+
+
+    /*max-width: 250px;
+    height: auto;
+    width: 25%;
+    margin: 0 5px;
+*/
+
+    .social-media img {
+        width: 30px;
+        height: 30px;
+    }
+    /* Ajustes para temporadas */
+    .season-info iframe {
+        width: 100%;
+        height: 200px;
+    }
+    /* Ajustes para la sección de noticias */
+    .new-title {
+        font-size: 24px;
+    }
+    .new-subtitle {
+        font-size: 20px;
+    }
+    .new-article {
+        padding: 10px;
+    }
+    .new-image {
+        margin-top: 20px;
+    }
+    /* Ajustes para productos y merchandising */
+    .product-container {
+        justify-content: space-around;
+    }
+    .product-item {
+        margin: 20px;
+    }
+    .product-image {
+        width: 150px;
+        height: 150px;
+    }
+    /* Ajustes para formularios */
+    form {
+        width: 100%;
+        margin: 30px;
+        padding: 50px;
+    }
+    form h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    input, textarea {
+        padding: 12px 20px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Estilos para 425px */    
+
+@media screen and (max-width: 425px){
+    header #toggle {
+        display: none; /* Oculta el checkbox */
+    }
+    
+
+    header .menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 90px; /* Ajusta la posición vertical según el tamaño de tu barra de navegación */   
+        box-sizing: border-box;
+        background-color: rgba(233, 94, 94, 0.397);
+    }
+    
+    header .menu .menu-icons {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+    }
+    
+    header label {
+        display: inline-flex;
+        color: #ad2828;
+        cursor: pointer;
+        position: absolute;
+        top: 25px; /* Ajusta la posición vertical del icono del menú */
+        right: 10px; /* Ajusta la posición horizontal del icono del menú */
+    }
+    
+    header #toggle:checked ~ .menu {
+        height: 100%;
+    }
+    
+    header #toggle:checked ~ label {
+        display: inline-flex;
+    }
+
+    header .menu a {
+        display: block;
+        text-align: center; /* Alinea los elementos del menú en el centro */
+        padding: 10px 0; /* Añade un poco de espacio alrededor del texto del enlace */
+        color: #000000; /* Color del texto del menú */
+        text-decoration: none; /* Quita el subrayado de los enlaces */
+        font-weight: bold;
+    }
+
+    /* Ajustes para temporadas */
+    
+    .trailer-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .season-info {
+        margin-top: 20px;
+    }
+
+    .season-info iframe {
+        width: 100%;
+        height: 200px;
+        margin-top: 8px;
+    }
+
+    .video-info { 
+        margin-top: 10px; 
+    }
+    
+    .sub-title {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .season-info p {
+        font-size: 14px;
+        line-height: 1; /* Altura de línea */
+        margin-top: 20px;
+    }
+
+    /* Estilos para personajes */
+.character-section {
+    text-align: center;
+}
+
+.character-container {
+    display: flex;
+    justify-content: center; 
+    gap: 5px; /* Espacio entre las imágenes */  
+    margin-top: 20px; 
+}
+
+.character-section h2 {
+    font-size: 16px; 
+    color: #ad2828; 
+    margin-bottom: 10px; /* Espacio inferior */
+    margin-top: 20px;
+}
+
+.character-container .character {
+    text-align: center; 
+}
+
+.character-container .character img {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover;
+}
+
+.character-container .character p {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: rgb(168, 31, 31);
+}
+
+
+
+/* Estilos para la sección de noticias */
+.news-section {
+    padding: 20px;
+}
+
+.new-title {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.new-subtitle {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.new-description {
+    font-size: 14px; 
+    margin-top: 8px;
+}
+
+.new-image {
+    margin-top: 20px;
+}
+
+.new-article .new-title{
+    padding: 0;
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+/* Estilos para productos y merchandising */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.product-item {
+    text-align: center;
+    margin: 50px; 
+}
+
+.product-image {
+    width: 250px;
+    height: 200px; 
+}
+
+/* Estilos para formularios */
+
+form {
+    width: 100%;
+    margin: 10px;
+    padding: 50px;
+
+}
+
+form h2 {
+    font-size: 18px;
+}
+
+input,textarea{
+    padding: 17px 20px;
+    margin-bottom: 20px;
+    background-color: beige;
+    border: 2px solid#a12c2c
+}
+
+}
+
+/* Estilos para 375px */    
+
+@media screen and (max-width: 375px){
+    .text {
+        font-size: 16px; 
+        line-height: 1.3;
+        text-align: center;
+        margin:35px;
+        width: 80%;
+    }
+
+/* Estilos para personajes */  
+    .character-container .character p {
+        font-size: 12px;
+    }
+    
+    /* Estilos para formularios */
+
+form {
+    width: 90%;
+    margin: 20px;
+    padding: 50px;
+
+}
+
+form h2 {
+    font-size: 18px;
+}
+
+input,textarea{
+    font-size: 10px;
+}
+}
+
+/* Estilos para 320px */    
+
+@media screen and (max-width: 320px){
+        /* Estilos para formularios */
+
+form {
+    width: 90%;
+    margin: 15px;
+    padding: 50px;
+
+}
 }
