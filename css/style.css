@@ -1,5 +1,5 @@
 /* Estilos generales */
-* {
+ * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -21,6 +21,12 @@ header {
     padding: 10px;
 }
 
+
+
+header #toggle {
+    display: none; 
+}
+
 a {
     text-decoration: none;
     color: rgb(168, 31, 31);
@@ -33,6 +39,7 @@ nav #toggle, nav label{
 nav a {
     font-weight: 600;
     padding: 10px;
+    font-size: 20px;
 }
 
 .logo {
@@ -92,6 +99,7 @@ footer {
     margin-right: 20px;
 }
 
+
 /* Estilos para temporadas */
 .season {
     margin: 20px;
@@ -140,7 +148,7 @@ footer {
 .season-info p {
     color: rgb(168, 31, 31);
     font-size: 16px;
-    line-height: 1.6; /* Altura de línea */
+    line-height: 1.6; 
     margin-top: 55px;
 }
 
@@ -262,6 +270,7 @@ footer {
 }
 
 /* Estilos para productos y merchandising */
+
 .product-container {
     display: flex;
     flex-wrap: wrap;
@@ -331,6 +340,10 @@ input,textarea{
 
 
 @media screen and (max-width: 768px) {
+
+    header #toggle {
+        display: none; /* Oculta el checkbox */
+    }
     .container {
         padding: 0 20px;
     }
@@ -349,12 +362,12 @@ input,textarea{
     align-items: center; 
     justify-content: center; 
     padding: 50px;
-    box-shadow: 0 0 20px rgba(224, 215, 215, 0.5); /* Añade una sombra para resaltar el formulario */
+    box-shadow: 0 0 20px rgba(224, 215, 215, 0.5);
     width: 90%;
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(88, 44, 44, 0.301); /*color de fondo con opacidad */
+    background-color: rgba(88, 44, 44, 0.301);
     margin: 30px;
     }
 
@@ -422,9 +435,10 @@ input,textarea{
         height: 0;
         overflow: hidden;
         position: absolute;
-        top: 90px; /* Ajusta la posición vertical según el tamaño de tu barra de navegación */   
+        top: 90px;    
         box-sizing: border-box;
         background-color: rgba(233, 94, 94, 0.397);
+        z-index: 999;
     }
     
     header .menu .menu-icons {
@@ -438,8 +452,8 @@ input,textarea{
         color: #ad2828;
         cursor: pointer;
         position: absolute;
-        top: 25px; /* Ajusta la posición vertical del icono del menú */
-        right: 10px; /* Ajusta la posición horizontal del icono del menú */
+        top: 25px; 
+        right: 10px;
     }
     
     header #toggle:checked ~ .menu {
@@ -452,10 +466,10 @@ input,textarea{
 
     header .menu a {
         display: block;
-        text-align: center; /* Alinea los elementos del menú en el centro */
-        padding: 10px 0; /* Añade un poco de espacio alrededor del texto del enlace */
-        color: #000000; /* Color del texto del menú */
-        text-decoration: none; /* Quita el subrayado de los enlaces */
+        text-align: center; 
+        padding: 10px 0;
+        color: #000000; 
+        text-decoration: none; 
         font-weight: bold;
     }
 
@@ -488,46 +502,42 @@ input,textarea{
 
     .season-info p {
         font-size: 14px;
-        line-height: 1; /* Altura de línea */
+        line-height: 1; 
         margin-top: 20px;
     }
 
     /* Estilos para personajes */
-.character-section {
-    text-align: center;
-}
 
-.character-container {
-    display: flex;
-    justify-content: center; 
-    gap: 5px; /* Espacio entre las imágenes */  
-    margin-top: 20px; 
-}
-
-.character-section h2 {
-    font-size: 16px; 
-    color: #ad2828; 
-    margin-bottom: 10px; /* Espacio inferior */
-    margin-top: 20px;
-}
-
-.character-container .character {
-    text-align: center; 
-}
-
-.character-container .character img {
-    width: 100px; 
-    height: 100px;
-    object-fit: cover;
-}
-
-.character-container .character p {
-    text-align: center;
-    font-family: sans-serif;
-    background-color: rgb(168, 31, 31);
-}
-
-
+    .section-principal {
+       height: 50px;
+        font-size: 12px;
+    }
+    
+    .section-dos h2{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    .section-dos .galeria {
+        margin: 10px;
+    }
+    
+    .section-dos .galeria img {
+        height: 150px;
+    }
+    
+    .character-title {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    .section-monstruos h2 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
 
 /* Estilos para la sección de noticias */
 .news-section {
@@ -635,12 +645,41 @@ input,textarea{
 /* Estilos para 320px */    
 
 @media screen and (max-width: 320px){
-        /* Estilos para formularios */
 
-form {
-    width: 90%;
-    margin: 15px;
-    padding: 50px;
+   /* Estilos para formularios */
+   .section-principal {
+    height: 30px;
+     font-size: 10px;
+ }
+ 
+ .section-dos h2{
+     font-size: 15px;
+     margin-top: 5px;
+ }
+ 
+ .section-dos .galeria {
+     margin: 8px;
+ }
+ 
+ .section-dos .galeria img {
+     height: 125px;
+ }
+ 
+ .character-title {
+     font-size: 10px;
+ }
+ 
+ .section-monstruos h2 {
+     margin-bottom: 10px;
+     margin-top: 10px;
+     font-size: 15px;
+ }
+ 
 
-}
+        
+ form {
+     width: 90%;
+     margin: 15px;
+     padding: 50px;
+    }
 }
