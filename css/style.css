@@ -9,7 +9,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     background-color: rgba(13, 12, 12, 1);
-    
+
 }
 
 header {
@@ -21,18 +21,26 @@ header {
     padding: 10px;
 }
 
+
+
+header #toggle {
+    display: none;
+}
+
 a {
     text-decoration: none;
     color: rgb(168, 31, 31);
 }
 
-nav #toggle, nav label{
+nav #toggle,
+nav label {
     display: none;
 }
 
 nav a {
     font-weight: 600;
     padding: 10px;
+    font-size: 20px;
 }
 
 .logo {
@@ -60,18 +68,18 @@ nav a {
 }
 
 .title {
-    color: rgb(155, 34, 34); 
+    color: rgb(155, 34, 34);
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-    margin: auto; 
-    margin-bottom: 20px; 
+    margin: auto;
+    margin-bottom: 20px;
     margin-top: 55px;
 }
 
 .text {
-    color: rgb(112, 36, 36); 
-    font-size: 16px; 
+    color: rgb(112, 36, 36);
+    font-size: 16px;
     line-height: 1.9;
     text-align: center;
     margin: auto;
@@ -92,6 +100,7 @@ footer {
     margin-right: 20px;
 }
 
+
 /* Estilos para temporadas */
 .season {
     margin: 20px;
@@ -108,24 +117,24 @@ footer {
 
 .season-info {
     margin-bottom: 40px;
-    display: flex; 
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     margin-top: 55px;
 }
 
 .season-info iframe {
-    display: block; 
+    display: block;
     margin: 50px;
-    width: 400px; 
+    width: 400px;
     height: 200px;
     margin-bottom: 20px;
 }
 
 .video-info {
-    width: 100%; 
-    text-align: center; 
-    margin-top: 20px; 
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .sub-title {
@@ -140,36 +149,59 @@ footer {
 .season-info p {
     color: rgb(168, 31, 31);
     font-size: 16px;
-    line-height: 1.6; /* Altura de línea */
+    line-height: 1.6;
     margin-top: 55px;
 }
 
 /* Estilos para personajes */
-.character-section {
-    text-align: center;
-}
 
-.character-container {
+.section-principal {
     display: flex;
-    justify-content: center; 
-    gap: 10px; /* Espacio entre las imágenes */  
-    margin-top: 55px; 
+    width: 100%;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ad2828;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
 }
 
-.character-section h2 {
-    font-size: 24px; 
-    color: #ad2828; 
-    margin-bottom: 10px; /* Espacio inferior */
-    margin-top: 55px;
+.section-dos h2 {
+    text-align: left;
+    font-size: 20px;
+    color: #a12c2c;
+    margin: 25px;
 }
 
-.character-container .character {
-    text-align: center; 
+.section-dos .galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* Espacio entre las imágenes */
+    margin: 30px;
 }
 
-.character-container .character img {
-    width: 200px; 
-    height: 200px;
+.section-dos .galeria .img-container {
+    position: relative;
+}
+
+.section-dos .galeria img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.character-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #ad2828;
+    color: white;
+    padding: 5px;
+    margin: 0;
 }
 
 .character-container .character p {
@@ -178,10 +210,75 @@ footer {
     background-color: rgb(168, 31, 31);
 }
 
+/* Define las ubicaciones en la cuadrícula utilizando nth-child */
+.galeria .img-container:nth-child(1) {
+    grid-area: 1 / 1;
+}
+
+.galeria .img-container:nth-child(2) {
+    grid-area: 1 / 2;
+}
+
+.galeria .img-container:nth-child(3) {
+    grid-area: 1 / 3;
+}
+
+.galeria .img-container:nth-child(4) {
+    grid-area: 1 / 4;
+}
+
+.galeria .img-container:nth-child(5) {
+    grid-area: 2 / 1;
+}
+
+.galeria .img-container:nth-child(6) {
+    grid-area: 2 / 2;
+}
+
+.galeria .img-container:nth-child(7) {
+    grid-area: 2 / 3;
+}
+
+.galeria .img-container:nth-child(8) {
+    grid-area: 2 / 4;
+}
+
+.galeria .img-container:nth-child(9) {
+    grid-area: 3 / 1;
+}
+
+.galeria .img-container:nth-child(10) {
+    grid-area: 3 / 2;
+}
+
+.galeria .img-container:nth-child(11) {
+    grid-area: 3 / 3;
+}
+
+.galeria .img-container:nth-child(12) {
+    grid-area: 3 / 4;
+}
+
+.galeria .img-container:nth-child(13) {
+    grid-area: 4 / 1;
+}
+
+.galeria .img-container:nth-child(14) {
+    grid-area: 4 / 2;
+}
+
+.section-monstruos h2 {
+    text-align: left;
+    font-size: 20px;
+    color: #a12c2c;
+}
+
+
 /* Estilos para la sección de noticias */
 .news-section {
     padding: 20px;
 }
+
 
 .new-title {
     color: rgb(168, 31, 31);
@@ -203,8 +300,8 @@ footer {
 }
 
 .new-description {
-    color:  #a12c2c;
-    font-size: 16px; 
+    color: #a12c2c;
+    font-size: 16px;
 }
 
 .new-image {
@@ -217,25 +314,26 @@ footer {
 }
 
 /* Estilos para productos y merchandising */
+
 .product-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .product-item {
     text-align: center;
-    margin: 50px; 
+    margin: 50px;
 }
 
 .product-image {
     width: 200px;
-    height: 200px; 
+    height: 200px;
 }
 
 .buy-button {
-    display: block; 
-    margin-top: 10px; 
+    display: block;
+    margin-top: 10px;
 }
 
 /* Estilos para formularios */
@@ -243,17 +341,17 @@ footer {
 form {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     padding: 50px;
-    box-shadow: 0 0 20px rgba(252, 86, 86, 0.5); /* Añade una sombra para resaltar el formulario */
+    box-shadow: 0 0 20px rgba(252, 86, 86, 0.5);
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.5); /*color de fondo con opacidad */
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 form h2 {
@@ -265,16 +363,17 @@ form h2 {
 }
 
 .input-group {
-    width: 100%; 
+    width: 100%;
 }
 
 .input-group label {
-    display: block; 
-    margin-bottom: 10px; 
+    display: block;
+    margin-bottom: 10px;
     color: #000000;
 }
 
-input,textarea{
+input,
+textarea {
     padding: 17px 25px;
     margin-bottom: 20px;
     background-color: beige;
@@ -286,143 +385,157 @@ input,textarea{
 
 
 @media screen and (max-width: 768px) {
+
+    header #toggle {
+        display: none;
+    }
+
     .container {
         padding: 0 20px;
     }
+
     .image-container img {
         max-width: 100%;
         width: 20%;
         height: auto;
     }
+
     .title {
         font-size: 18px;
-        
+
     }
+
     .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    padding: 50px;
-    box-shadow: 0 0 20px rgba(224, 215, 215, 0.5); /* Añade una sombra para resaltar el formulario */
-    width: 90%;
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(88, 44, 44, 0.301); /*color de fondo con opacidad */
-    margin: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        box-shadow: 0 0 20px rgba(224, 215, 215, 0.5);
+        width: 90%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(88, 44, 44, 0.301);
+        margin: 30px;
     }
-
-
-    /*max-width: 250px;
-    height: auto;
-    width: 25%;
-    margin: 0 5px;
-*/
 
     .social-media img {
         width: 30px;
         height: 30px;
     }
+
     /* Ajustes para temporadas */
     .season-info iframe {
         width: 100%;
         height: 200px;
     }
+
     /* Ajustes para la sección de noticias */
     .new-title {
         font-size: 24px;
     }
+
     .new-subtitle {
         font-size: 20px;
     }
+
     .new-article {
         padding: 10px;
     }
+
     .new-image {
         margin-top: 20px;
     }
+
     /* Ajustes para productos y merchandising */
     .product-container {
         justify-content: space-around;
     }
+
     .product-item {
         margin: 20px;
     }
+
     .product-image {
         width: 150px;
         height: 150px;
     }
+
     /* Ajustes para formularios */
     form {
         width: 100%;
         margin: 30px;
         padding: 50px;
     }
+
     form h2 {
         font-size: 18px;
         margin-bottom: 20px;
         margin-top: 10px;
     }
-    input, textarea {
+
+    input,
+    textarea {
         padding: 12px 20px;
         margin-bottom: 10px;
     }
 }
 
 
-/* Estilos para 425px */    
+/* Estilos para 425px */
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
     header #toggle {
-        display: none; /* Oculta el checkbox */
+        display: none;
     }
-    
+
 
     header .menu {
         width: 100%;
         height: 0;
         overflow: hidden;
         position: absolute;
-        top: 90px; /* Ajusta la posición vertical según el tamaño de tu barra de navegación */   
+        top: 90px;
         box-sizing: border-box;
         background-color: rgba(233, 94, 94, 0.397);
+        z-index: 999;
     }
-    
+
     header .menu .menu-icons {
         flex-direction: column;
         align-items: center;
         padding: 8px;
     }
-    
+
     header label {
         display: inline-flex;
         color: #ad2828;
         cursor: pointer;
         position: absolute;
-        top: 25px; /* Ajusta la posición vertical del icono del menú */
-        right: 10px; /* Ajusta la posición horizontal del icono del menú */
+        top: 25px;
+        right: 10px;
     }
-    
-    header #toggle:checked ~ .menu {
+
+    header #toggle:checked~.menu {
         height: 100%;
     }
-    
-    header #toggle:checked ~ label {
+
+    header #toggle:checked~label {
         display: inline-flex;
     }
 
     header .menu a {
         display: block;
-        text-align: center; /* Alinea los elementos del menú en el centro */
-        padding: 10px 0; /* Añade un poco de espacio alrededor del texto del enlace */
-        color: #000000; /* Color del texto del menú */
-        text-decoration: none; /* Quita el subrayado de los enlaces */
+        text-align: center;
+        padding: 10px 0;
+        color: #000000;
+        text-decoration: none;
         font-weight: bold;
     }
 
     /* Ajustes para temporadas */
-    
+
     .trailer-title {
         font-size: 18px;
         margin-bottom: 20px;
@@ -439,10 +552,10 @@ input,textarea{
         margin-top: 8px;
     }
 
-    .video-info { 
-        margin-top: 10px; 
+    .video-info {
+        margin-top: 10px;
     }
-    
+
     .sub-title {
         font-size: 16px;
         margin-top: 10px;
@@ -450,159 +563,187 @@ input,textarea{
 
     .season-info p {
         font-size: 14px;
-        line-height: 1; /* Altura de línea */
+        line-height: 1;
         margin-top: 20px;
     }
 
     /* Estilos para personajes */
-.character-section {
-    text-align: center;
-}
 
-.character-container {
-    display: flex;
-    justify-content: center; 
-    gap: 5px; /* Espacio entre las imágenes */  
-    margin-top: 20px; 
-}
+    .section-principal {
+        height: 50px;
+        font-size: 12px;
+    }
 
-.character-section h2 {
-    font-size: 16px; 
-    color: #ad2828; 
-    margin-bottom: 10px; /* Espacio inferior */
-    margin-top: 20px;
-}
+    .section-dos h2 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
 
-.character-container .character {
-    text-align: center; 
-}
+    .section-dos .galeria {
+        margin: 10px;
+    }
 
-.character-container .character img {
-    width: 100px; 
-    height: 100px;
-    object-fit: cover;
-}
+    .section-dos .galeria img {
+        height: 150px;
+    }
 
-.character-container .character p {
-    text-align: center;
-    font-family: sans-serif;
-    background-color: rgb(168, 31, 31);
-}
+    .character-title {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .section-monstruos h2 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
 
 
+    /* Estilos para la sección de noticias */
+    .news-section {
+        padding: 20px;
+    }
 
-/* Estilos para la sección de noticias */
-.news-section {
-    padding: 20px;
-}
+    .new-title {
+        font-size: 18px;
+        margin-top: 10px;
+    }
 
-.new-title {
-    font-size: 18px;
-    margin-top: 10px;
-}
+    .new-subtitle {
+        font-size: 18px;
+        margin-top: 10px;
+    }
 
-.new-subtitle {
-    font-size: 18px;
-    margin-top: 10px;
-}
+    .new-description {
+        font-size: 14px;
+        margin-top: 8px;
+    }
 
-.new-description {
-    font-size: 14px; 
-    margin-top: 8px;
-}
+    .new-image {
+        margin-top: 20px;
+    }
 
-.new-image {
-    margin-top: 20px;
-}
+    .new-article .new-title {
+        padding: 0;
+        font-size: 18px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
 
-.new-article .new-title{
-    padding: 0;
-    font-size: 18px;
-    margin-bottom: 8px;
-    margin-top: 8px;
-}
-/* Estilos para productos y merchandising */
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-}
+    /* Estilos para productos y merchandising */
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-.product-item {
-    text-align: center;
-    margin: 50px; 
-}
+    .product-item {
+        text-align: center;
+        margin: 50px;
+    }
 
-.product-image {
-    width: 250px;
-    height: 200px; 
-}
+    .product-image {
+        width: 250px;
+        height: 200px;
+    }
 
-/* Estilos para formularios */
+    /* Estilos para formularios */
 
-form {
-    width: 100%;
-    margin: 10px;
-    padding: 50px;
+    form {
+        width: 100%;
+        margin: 10px;
+        padding: 50px;
 
-}
+    }
 
-form h2 {
-    font-size: 18px;
-}
+    form h2 {
+        font-size: 18px;
+    }
 
-input,textarea{
-    padding: 17px 20px;
-    margin-bottom: 20px;
-    background-color: beige;
-    border: 2px solid#a12c2c
-}
+    input,
+    textarea {
+        padding: 17px 20px;
+        margin-bottom: 20px;
+        background-color: beige;
+        border: 2px solid#a12c2c
+    }
 
 }
 
-/* Estilos para 375px */    
+/* Estilos para 375px */
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 375px) {
     .text {
-        font-size: 16px; 
+        font-size: 16px;
         line-height: 1.3;
         text-align: center;
-        margin:35px;
+        margin: 35px;
         width: 80%;
     }
 
-/* Estilos para personajes */  
+    /* Estilos para personajes */
     .character-container .character p {
         font-size: 12px;
     }
-    
+
     /* Estilos para formularios */
 
-form {
-    width: 90%;
-    margin: 20px;
-    padding: 50px;
+    form {
+        width: 90%;
+        margin: 20px;
+        padding: 50px;
 
+    }
+
+    form h2 {
+        font-size: 18px;
+    }
+
+    input,
+    textarea {
+        font-size: 10px;
+    }
 }
 
-form h2 {
-    font-size: 18px;
-}
+/* Estilos para 320px */
 
-input,textarea{
-    font-size: 10px;
-}
-}
+@media screen and (max-width: 320px) {
 
-/* Estilos para 320px */    
+    /* Estilos para formularios */
+    .section-principal {
+        height: 30px;
+        font-size: 10px;
+    }
 
-@media screen and (max-width: 320px){
-        /* Estilos para formularios */
+    .section-dos h2 {
+        font-size: 15px;
+        margin-top: 5px;
+    }
 
-form {
-    width: 90%;
-    margin: 15px;
-    padding: 50px;
+    .section-dos .galeria {
+        margin: 8px;
+    }
 
-}
+    .section-dos .galeria img {
+        height: 125px;
+    }
+
+    .character-title {
+        font-size: 10px;
+    }
+
+    .section-monstruos h2 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+
+
+    form {
+        width: 90%;
+        margin: 15px;
+        padding: 50px;
+    }
 }
