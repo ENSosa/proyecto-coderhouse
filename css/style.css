@@ -12,45 +12,48 @@ body {
 
 }
 
-header {
+.navbar {
     display: flex;
+    align-items: center;
     height: 90px;
     background-color: black;
     justify-content: space-between;
-    align-items: center;
     padding: 10px;
 }
 
 
-
-header #toggle {
-    display: none;
+.navbar #toggle,
+.navbar label {
+    display: none; 
 }
 
-a {
-    text-decoration: none;
-    color: rgb(168, 31, 31);
+
+.navbar .menu-icons {
+    display: flex;
+    align-items: center;
 }
 
-nav #toggle,
-nav label {
-    display: none;
+.navbar .navbar-collapse {
+    flex-basis: auto; 
+    flex-grow: initial; 
 }
 
-nav a {
+.navbar .nav-link {
     font-weight: 600;
     padding: 10px;
     font-size: 20px;
+    color:#ad2828;
+    text-decoration: none;
 }
 
-.logo {
+.navbar .logo {
     display: flex;
     align-items: center;
     height: 70px;
 }
 
-.logo img {
-    height: 90px;
+.navbar .logo-img {
+    height: 90px; 
 }
 
 
@@ -85,19 +88,10 @@ nav a {
     margin: auto;
     width: 80%;
 }
-
-footer {
+ 
+ footer {
     background-color: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 55px;
-}
-
-.social-media img {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
+    width: 100%;
 }
 
 
@@ -277,6 +271,7 @@ footer {
 /* Estilos para la sección de noticias */
 .news-section {
     padding: 20px;
+    
 }
 
 
@@ -297,6 +292,18 @@ footer {
 
 .new-article {
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(224, 215, 215, 0.5);
+    width: 90%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(88, 44, 44, 0.301);
+    margin: 30px;
 }
 
 .new-description {
@@ -313,28 +320,6 @@ footer {
     margin-top: 40px;
 }
 
-/* Estilos para productos y merchandising */
-
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.product-item {
-    text-align: center;
-    margin: 50px;
-}
-
-.product-image {
-    width: 200px;
-    height: 200px;
-}
-
-.buy-button {
-    display: block;
-    margin-top: 10px;
-}
 
 /* Estilos para formularios */
 
@@ -386,9 +371,48 @@ textarea {
 
 @media screen and (max-width: 768px) {
 
-    header #toggle {
+    #toggle {
         display: none;
     }
+
+    .menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 90px;
+        box-sizing: border-box;
+        background-color: rgba(233, 94, 94, 0.397);
+        z-index: 999;
+    }
+    
+    .menu .menu-icons {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+    }
+    .navbar .nav-link {
+        padding: 8px;
+        font-size: 18px;
+        color:#000000;
+      
+    }
+    .navbar label {
+        display: inline-flex;
+        color: #ad2828;
+        cursor: pointer;
+        position: absolute;
+        top: 25px;
+        right: 10px;
+    }
+    #toggle:checked ~ .menu {
+        height: 250%;
+    }
+
+    #toggle:checked~label {
+        display: inline-flex;
+    }
+
 
     .container {
         padding: 0 20px;
@@ -449,49 +473,39 @@ textarea {
     }
 
     /* Ajustes para productos y merchandising */
-    .product-container {
-        justify-content: space-around;
+    
+    .card {
+        width: 14rem;
     }
-
-    .product-item {
-        margin: 20px;
-    }
-
-    .product-image {
-        width: 150px;
-        height: 150px;
-    }
-
     /* Ajustes para formularios */
     form {
         width: 100%;
-        margin: 30px;
-        padding: 50px;
+        margin: 0 auto; /* Centrar horizontalmente el formulario */
+        padding: 40px;
     }
 
     form h2 {
         font-size: 18px;
-        margin-bottom: 20px;
-        margin-top: 10px;
-    }
+        text-align: center; /* Centrar el título */
+        margin-bottom: 20px    }
 
     input,
     textarea {
-        padding: 12px 20px;
-        margin-bottom: 10px;
+        width: 100%; /* Ancho completo */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    
     }
 }
 
 
 /* Estilos para 425px */
-
 @media screen and (max-width: 425px) {
-    header #toggle {
+    #toggle {
         display: none;
     }
 
-
-    header .menu {
+    .menu {
         width: 100%;
         height: 0;
         overflow: hidden;
@@ -501,14 +515,19 @@ textarea {
         background-color: rgba(233, 94, 94, 0.397);
         z-index: 999;
     }
-
-    header .menu .menu-icons {
+    
+    .menu .menu-icons {
         flex-direction: column;
         align-items: center;
         padding: 8px;
     }
-
-    header label {
+    .navbar .nav-link {
+        padding: 8px;
+        font-size: 18px;
+        color:#000000;
+      
+    }
+    .navbar label {
         display: inline-flex;
         color: #ad2828;
         cursor: pointer;
@@ -516,22 +535,12 @@ textarea {
         top: 25px;
         right: 10px;
     }
-
-    header #toggle:checked~.menu {
-        height: 100%;
+    #toggle:checked ~ .menu {
+        height: 250%;
     }
 
-    header #toggle:checked~label {
+    #toggle:checked~label {
         display: inline-flex;
-    }
-
-    header .menu a {
-        display: block;
-        text-align: center;
-        padding: 10px 0;
-        color: #000000;
-        text-decoration: none;
-        font-weight: bold;
     }
 
     /* Ajustes para temporadas */
@@ -599,53 +608,16 @@ textarea {
         font-size: 16px;
     }
 
-
-    /* Estilos para la sección de noticias */
-    .news-section {
-        padding: 20px;
-    }
-
-    .new-title {
-        font-size: 18px;
-        margin-top: 10px;
-    }
-
-    .new-subtitle {
-        font-size: 18px;
-        margin-top: 10px;
-    }
-
-    .new-description {
-        font-size: 14px;
-        margin-top: 8px;
-    }
-
-    .new-image {
-        margin-top: 20px;
-    }
-
-    .new-article .new-title {
-        padding: 0;
-        font-size: 18px;
-        margin-bottom: 8px;
-        margin-top: 8px;
-    }
-
     /* Estilos para productos y merchandising */
-    .product-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+
+    .d-flex {
+        flex-direction: column; 
+        align-items: center;
     }
 
-    .product-item {
-        text-align: center;
-        margin: 50px;
-    }
-
-    .product-image {
-        width: 250px;
-        height: 200px;
+    .card {
+        width: calc(100% - 2rem); 
+        margin-bottom: 10px; 
     }
 
     /* Estilos para formularios */
