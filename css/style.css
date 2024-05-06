@@ -24,7 +24,7 @@ body {
 
 .navbar #toggle,
 .navbar label {
-    display: none; 
+    display: none;
 }
 
 
@@ -34,15 +34,15 @@ body {
 }
 
 .navbar .navbar-collapse {
-    flex-basis: auto; 
-    flex-grow: initial; 
+    flex-basis: auto;
+    flex-grow: initial;
 }
 
 .navbar .nav-link {
     font-weight: 600;
     padding: 10px;
     font-size: 20px;
-    color:#ad2828;
+    color: #ad2828;
     text-decoration: none;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 .navbar .logo-img {
-    height: 90px; 
+    height: 90px;
 }
 
 
@@ -88,8 +88,8 @@ body {
     margin: auto;
     width: 80%;
 }
- 
- footer {
+
+footer {
     background-color: black;
     width: 100%;
 }
@@ -271,7 +271,7 @@ body {
 /* Estilos para la sección de noticias */
 .news-section {
     padding: 20px;
-    
+
 }
 
 
@@ -385,18 +385,20 @@ textarea {
         background-color: rgba(233, 94, 94, 0.397);
         z-index: 999;
     }
-    
+
     .menu .menu-icons {
         flex-direction: column;
         align-items: center;
         padding: 8px;
     }
+
     .navbar .nav-link {
         padding: 8px;
         font-size: 18px;
-        color:#000000;
-      
+        color: #000000;
+
     }
+
     .navbar label {
         display: inline-flex;
         color: #ad2828;
@@ -405,7 +407,8 @@ textarea {
         top: 25px;
         right: 10px;
     }
-    #toggle:checked ~ .menu {
+
+    #toggle:checked~.menu {
         height: 250%;
     }
 
@@ -473,28 +476,33 @@ textarea {
     }
 
     /* Ajustes para productos y merchandising */
-    
+
     .card {
         width: 14rem;
     }
+
     /* Ajustes para formularios */
     form {
         width: 100%;
-        margin: 0 auto; /* Centrar horizontalmente el formulario */
+        margin: 0 auto;
+        /* Centrar horizontalmente el formulario */
         padding: 40px;
     }
 
     form h2 {
         font-size: 18px;
-        text-align: center; /* Centrar el título */
-        margin-bottom: 20px    }
+        text-align: center;
+        /* Centrar el título */
+        margin-bottom: 20px
+    }
 
     input,
     textarea {
-        width: 100%; /* Ancho completo */
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    
+        width: 100%;
+        /* Ancho completo */
+        padding: 15px 20px;
+        margin-bottom: 20px;
+
     }
 }
 
@@ -515,18 +523,20 @@ textarea {
         background-color: rgba(233, 94, 94, 0.397);
         z-index: 999;
     }
-    
+
     .menu .menu-icons {
         flex-direction: column;
         align-items: center;
         padding: 8px;
     }
+
     .navbar .nav-link {
         padding: 8px;
         font-size: 18px;
-        color:#000000;
-      
+        color: #000000;
+
     }
+
     .navbar label {
         display: inline-flex;
         color: #ad2828;
@@ -535,7 +545,8 @@ textarea {
         top: 25px;
         right: 10px;
     }
-    #toggle:checked ~ .menu {
+
+    #toggle:checked~.menu {
         height: 250%;
     }
 
@@ -611,13 +622,13 @@ textarea {
     /* Estilos para productos y merchandising */
 
     .d-flex {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
     .card {
-        width: calc(100% - 2rem); 
-        margin-bottom: 10px; 
+        width: calc(100% - 2rem);
+        margin-bottom: 10px;
     }
 
     /* Estilos para formularios */
