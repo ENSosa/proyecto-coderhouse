@@ -1,0 +1,123 @@
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none;
+  }
+
+  .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 90px;
+    box-sizing: border-box;
+    background-color: rgba(233, 94, 94, 0.397);
+    z-index: 999;
+
+    .menu-icons {
+      @include flex(column, none, center, none);
+      padding: 8px;
+    }
+  }
+
+  .navbar .nav-link {
+    padding: 8px;
+    font-size: map-get($fuentes, S);
+    color: #000000;
+  }
+
+  .navbar label {
+    display: inline-flex;
+    color: map-get($color, color5);
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+  }
+
+  #toggle:checked~.menu {
+    height: 250%;
+  }
+
+  #toggle:checked~label {
+    display: inline-flex;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    width: 20%;
+    height: auto;
+  }
+
+  .title {
+    font-size: map-get($fuentes, S);
+  }
+
+  .text {
+    @include flex(column, center, center, none);
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(224, 215, 215, 0.5);
+    width: 90%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: map-get($color, color8);
+    margin: 30px;
+  }
+
+  .social-media img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Ajustes para temporadas */
+  .season-info iframe {
+    width: 100%;
+    height: 200px;
+  }
+
+  /* Ajustes para la sección de noticias */
+  .new-title {
+    font-size: map-get($fuentes, M);
+  }
+
+  .new-subtitle {
+    font-size: map-get($fuentes, S);
+  }
+
+  .new-article {
+    padding: 5px;
+  }
+
+  .new-image {
+    margin-top: 20px;
+  }
+
+  /* Ajustes para productos y merchandising */
+  .card {
+    width: 14rem;
+  }
+
+  /* Ajustes para formularios */
+  form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+
+    h2 {
+      font-size: map-get($fuentes, S);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

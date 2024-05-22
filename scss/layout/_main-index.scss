@@ -1,0 +1,31 @@
+/* Estilos para la sección de imagenes index*/
+.image-container {
+    @include flex(none, center, none, none);
+    margin-top: 55px;
+
+    img {
+        max-width: 250px;
+        height: auto;
+        width: 25%;
+        margin: 0 5px;
+    }
+}
+
+.title {
+    color: map-get($color, color3);
+    font-size: map-get($fuentes, M);
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 55px;
+}
+
+.text {
+    color: map-get($color, color4);
+    font-size: map-get($fuentes, S);
+    line-height: 1.9;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}

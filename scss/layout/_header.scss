@@ -1,0 +1,48 @@
+/*header*/
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: map-get($color, color1);
+
+}
+
+.navbar {
+    @include flex(none, space-between, center, none);
+    height: 90px;
+    background-color: map-get($color, color2);
+    padding: 10px;
+
+    #toggle,
+    label {
+        display: none;
+    }
+
+    .menu-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-collapse {
+        flex-basis: auto;
+        flex-grow: initial;
+    }
+
+    .nav-link {
+        font-weight: 600;
+        padding: 10px;
+        font-size: map-get($fuentes, M);
+        color: map-get($color, color3);
+        text-decoration: none;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 70px;
+
+        .logo-img {
+            height: 90px;
+        }
+    }
+}

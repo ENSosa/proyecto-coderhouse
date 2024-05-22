@@ -1,0 +1,125 @@
+/* Estilos para personajes */
+
+// Estilos para la sección principal
+.section-principal {
+    @include flex(none, none, center, none);
+    width: 100%;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: map-get($color, color3);
+    font-size: map-get($fuentes, S);
+}
+
+.section-dos {
+    h2 {
+        text-align: left;
+        font-size: map-get($fuentes, M);
+        color: map-get($color, color3);
+        margin: 25px;
+    }
+
+    .galeria {
+        @include grid(repeat(4, 1fr), none, 10px, none);
+        margin: 30px;
+
+        // Estilos para el contenedor de la imagen
+        .img-container {
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+            }
+
+
+            .character-title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                background-color: map-get($color, color3);
+                color: map-get($color, color7);
+                padding: 5px;
+                margin: 0;
+            }
+        }
+    }
+
+
+    .character-container {
+        .character p {
+            text-align: center;
+            font-family: sans-serif;
+            background-color: map-get($color, color3);
+        }
+    }
+
+
+    .galeria .img-container:nth-child(1) {
+        grid-area: 1 / 1;
+    }
+
+    .galeria .img-container:nth-child(2) {
+        grid-area: 1 / 2;
+    }
+
+    .galeria .img-container:nth-child(3) {
+        grid-area: 1 / 3;
+    }
+
+    .galeria .img-container:nth-child(4) {
+        grid-area: 1 / 4;
+    }
+
+    .galeria .img-container:nth-child(5) {
+        grid-area: 2 / 1;
+    }
+
+    .galeria .img-container:nth-child(6) {
+        grid-area: 2 / 2;
+    }
+
+    .galeria .img-container:nth-child(7) {
+        grid-area: 2 / 3;
+    }
+
+    .galeria .img-container:nth-child(8) {
+        grid-area: 2 / 4;
+    }
+
+    .galeria .img-container:nth-child(9) {
+        grid-area: 3 / 1;
+    }
+
+    .galeria .img-container:nth-child(10) {
+        grid-area: 3 / 2;
+    }
+
+    .galeria .img-container:nth-child(11) {
+        grid-area: 3 / 3;
+    }
+
+    .galeria .img-container:nth-child(12) {
+        grid-area: 3 / 4;
+    }
+
+    .galeria .img-container:nth-child(13) {
+        grid-area: 4 / 1;
+    }
+
+    .galeria .img-container:nth-child(14) {
+        grid-area: 4 / 2;
+    }
+}
+
+
+.section-monstruos {
+    h2 {
+        text-align: left;
+        font-size: map-get($fuentes, M);
+        color: map-get($color, color3);
+    }
+}

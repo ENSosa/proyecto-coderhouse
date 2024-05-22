@@ -1,0 +1,148 @@
+@media screen and (max-width: 425px) {
+    #toggle {
+        display: none;
+    }
+
+    .menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 90px;
+        box-sizing: border-box;
+        background-color: rgba(233, 94, 94, 0.397);
+        z-index: 999;
+    }
+
+    .menu .menu-icons {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+    }
+
+    .navbar .nav-link {
+        padding: 8px;
+        font-size: map-get($fuentes, S);
+        color: map-get($color, color2);
+    }
+
+    .navbar label {
+        display: inline-flex;
+        color: map-get($color, color5);
+        cursor: pointer;
+        position: absolute;
+        top: 25px;
+        right: 10px;
+    }
+
+    #toggle:checked~.menu {
+        height: 250%;
+    }
+
+    #toggle:checked~label {
+        display: inline-flex;
+    }
+
+    /* Ajustes para temporadas */
+    .trailer-title {
+        font-size: map-get($fuentes, S);
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .season-info {
+        margin-top: 20px;
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            margin-top: 8px;
+        }
+
+        .video-info {
+            margin-top: 10px;
+        }
+
+        .sub-title {
+            font-size: map-get($fuentes, XS);
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: map-get($fuentes, S);
+            line-height: 1;
+            margin-top: 20px;
+        }
+    }
+
+    /* Estilos para personajes */
+    .section-principal {
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .section-dos {
+        h2 {
+            font-size: map-get($fuentes, S);
+            margin-top: 10px;
+        }
+
+        .galeria {
+            margin: 10px;
+
+            .img-container {
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                }
+            }
+
+            .character-title {
+                padding: 0px;
+                margin: 0;
+                font-size: map-get($fuentes, XS);
+            }
+        }
+    }
+
+    .section-monstruos {
+        h2 {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            font-size: map-get($fuentes, XS);
+        }
+    }
+
+    /* Estilos para productos y merchandising */
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: calc(100% - 2rem);
+        margin-bottom: 10px;
+    }
+
+    /* Estilos para formularios */
+    form {
+        width: 100%;
+        margin: 10px;
+        padding: 50px;
+
+        h2 {
+            font-size: map-get($fuentes, S);
+        }
+
+        input,
+        textarea {
+            padding: 17px 20px;
+            margin-bottom: 20px;
+            background-color: map-get($color, color7);
+            border: 2px solid#a12c2c;
+        }
+    }
+}

@@ -1,301 +1,264 @@
+@charset "UTF-8";
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1; } }
+
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1; } }
+
 /* Estilos generales */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
 
+footer {
+  background-color: black;
+  width: 100%; }
+  footer .nav-link {
+    color: #a81f1f !important; }
+  footer .text-body-secondary {
+    color: #a81f1f !important; }
+
+/*header*/
 body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color: rgba(13, 12, 12, 1);
-
-}
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #0d0c0c; }
 
 .navbar {
+  display: flex;
+  flex-direction: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: none;
+  height: 90px;
+  background-color: black;
+  padding: 10px; }
+  .navbar #toggle,
+  .navbar label {
+    display: none; }
+  .navbar .menu-icons {
     display: flex;
-    align-items: center;
-    height: 90px;
-    background-color: black;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-
-.navbar #toggle,
-.navbar label {
-    display: none;
-}
-
-
-.navbar .menu-icons {
-    display: flex;
-    align-items: center;
-}
-
-.navbar .navbar-collapse {
+    align-items: center; }
+  .navbar .navbar-collapse {
     flex-basis: auto;
-    flex-grow: initial;
-}
-
-.navbar .nav-link {
+    flex-grow: initial; }
+  .navbar .nav-link {
     font-weight: 600;
     padding: 10px;
     font-size: 20px;
-    color: #ad2828;
-    text-decoration: none;
-}
-
-.navbar .logo {
+    color: #9b2222;
+    text-decoration: none; }
+  .navbar .logo {
     display: flex;
     align-items: center;
-    height: 70px;
-}
+    height: 70px; }
+    .navbar .logo .logo-img {
+      height: 90px; }
 
-.navbar .logo-img {
-    height: 90px;
-}
-
-
+/* Estilos para la sección de imagenes index*/
 .image-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 55px;
-}
-
-.image-container img {
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: none;
+  flex-wrap: none;
+  margin-top: 55px; }
+  .image-container img {
     max-width: 250px;
     height: auto;
     width: 25%;
-    margin: 0 5px;
-}
+    margin: 0 5px; }
 
 .title {
-    color: rgb(155, 34, 34);
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 55px;
-}
+  color: #9b2222;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 55px; }
 
 .text {
-    color: rgb(112, 36, 36);
-    font-size: 16px;
-    line-height: 1.9;
-    text-align: center;
-    margin: auto;
-    width: 80%;
-}
+  color: #702424;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+  margin: auto;
+  width: 80%; }
 
-footer {
-    background-color: black;
-    width: 100%;
-}
-
-
-/* Estilos para temporadas */
+/* Estilos para temporadas*/
 .season {
-    margin: 20px;
-}
+  margin: 20px; }
 
-.trailer-title {
-    color: rgb(168, 31, 31);
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 55px;
-}
+.trailer-title, .sub-title {
+  color: #9b2222;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 55px; }
 
 .season-info {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 55px;
-}
-
-.season-info iframe {
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: none;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: 55px; }
+  .season-info iframe {
     display: block;
     margin: 50px;
     width: 400px;
     height: 200px;
-    margin-bottom: 20px;
-}
+    margin-bottom: 20px; }
 
 .video-info {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.sub-title {
-    color: rgb(168, 31, 31);
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 55px;
-}
+  width: 100%;
+  text-align: center;
+  margin-top: 20px; }
 
 .season-info p {
-    color: rgb(168, 31, 31);
-    font-size: 16px;
-    line-height: 1.6;
-    margin-top: 55px;
-}
+  color: #9b2222;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 55px; }
 
 /* Estilos para personajes */
-
 .section-principal {
-    display: flex;
-    width: 100%;
-    height: 80px;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #ad2828;
-    font-size: 16px;
-    justify-content: center;
-    align-items: center;
-}
+  display: flex;
+  flex-direction: none;
+  justify-content: none;
+  align-items: center;
+  flex-wrap: none;
+  width: 100%;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #9b2222;
+  font-size: 16px; }
 
 .section-dos h2 {
-    text-align: left;
-    font-size: 20px;
-    color: #a12c2c;
-    margin: 25px;
-}
+  text-align: left;
+  font-size: 20px;
+  color: #9b2222;
+  margin: 25px; }
 
 .section-dos .galeria {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    /* Espacio entre las imágenes */
-    margin: 30px;
-}
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: none;
+  gap: 10px;
+  grid-template-areas: none;
+  margin: 30px; }
+  .section-dos .galeria .img-container {
+    position: relative; }
+    .section-dos .galeria .img-container img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover; }
+    .section-dos .galeria .img-container .character-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      background-color: #9b2222;
+      color: beige;
+      padding: 5px;
+      margin: 0; }
 
-.section-dos .galeria .img-container {
-    position: relative;
-}
+.section-dos .character-container .character p {
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #9b2222; }
 
-.section-dos .galeria img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
+.section-dos .galeria .img-container:nth-child(1) {
+  grid-area: 1 / 1; }
 
-.character-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #ad2828;
-    color: white;
-    padding: 5px;
-    margin: 0;
-}
+.section-dos .galeria .img-container:nth-child(2) {
+  grid-area: 1 / 2; }
 
-.character-container .character p {
-    text-align: center;
-    font-family: sans-serif;
-    background-color: rgb(168, 31, 31);
-}
+.section-dos .galeria .img-container:nth-child(3) {
+  grid-area: 1 / 3; }
 
-/* Define las ubicaciones en la cuadrícula utilizando nth-child */
-.galeria .img-container:nth-child(1) {
-    grid-area: 1 / 1;
-}
+.section-dos .galeria .img-container:nth-child(4) {
+  grid-area: 1 / 4; }
 
-.galeria .img-container:nth-child(2) {
-    grid-area: 1 / 2;
-}
+.section-dos .galeria .img-container:nth-child(5) {
+  grid-area: 2 / 1; }
 
-.galeria .img-container:nth-child(3) {
-    grid-area: 1 / 3;
-}
+.section-dos .galeria .img-container:nth-child(6) {
+  grid-area: 2 / 2; }
 
-.galeria .img-container:nth-child(4) {
-    grid-area: 1 / 4;
-}
+.section-dos .galeria .img-container:nth-child(7) {
+  grid-area: 2 / 3; }
 
-.galeria .img-container:nth-child(5) {
-    grid-area: 2 / 1;
-}
+.section-dos .galeria .img-container:nth-child(8) {
+  grid-area: 2 / 4; }
 
-.galeria .img-container:nth-child(6) {
-    grid-area: 2 / 2;
-}
+.section-dos .galeria .img-container:nth-child(9) {
+  grid-area: 3 / 1; }
 
-.galeria .img-container:nth-child(7) {
-    grid-area: 2 / 3;
-}
+.section-dos .galeria .img-container:nth-child(10) {
+  grid-area: 3 / 2; }
 
-.galeria .img-container:nth-child(8) {
-    grid-area: 2 / 4;
-}
+.section-dos .galeria .img-container:nth-child(11) {
+  grid-area: 3 / 3; }
 
-.galeria .img-container:nth-child(9) {
-    grid-area: 3 / 1;
-}
+.section-dos .galeria .img-container:nth-child(12) {
+  grid-area: 3 / 4; }
 
-.galeria .img-container:nth-child(10) {
-    grid-area: 3 / 2;
-}
+.section-dos .galeria .img-container:nth-child(13) {
+  grid-area: 4 / 1; }
 
-.galeria .img-container:nth-child(11) {
-    grid-area: 3 / 3;
-}
-
-.galeria .img-container:nth-child(12) {
-    grid-area: 3 / 4;
-}
-
-.galeria .img-container:nth-child(13) {
-    grid-area: 4 / 1;
-}
-
-.galeria .img-container:nth-child(14) {
-    grid-area: 4 / 2;
-}
+.section-dos .galeria .img-container:nth-child(14) {
+  grid-area: 4 / 2; }
 
 .section-monstruos h2 {
-    text-align: left;
-    font-size: 20px;
-    color: #a12c2c;
-}
-
+  text-align: left;
+  font-size: 20px;
+  color: #9b2222; }
 
 /* Estilos para la sección de noticias */
-.news-section {
-    padding: 20px;
-
-}
-
-
-.new-title {
-    color: rgb(168, 31, 31);
-    font-size: 28px;
+.new-section {
+  padding: 20px; }
+  .new-section .new-title, .new-section .new-article .new-subtitle {
+    color: #702424;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 30px;
-}
-
-.new-subtitle {
-    color: #a12c2c;
-    font-size: 24px;
-    margin-bottom: 30px;
-    margin-top: 40px;
-}
-
-.new-article {
-    margin-bottom: 40px;
+    margin-top: 30px; }
+  .new-section .new-article {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-wrap: none;
+    margin-bottom: 40px;
     padding: 50px;
     box-shadow: 0 0 20px rgba(224, 215, 215, 0.5);
     width: 90%;
@@ -303,430 +266,294 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba(88, 44, 44, 0.301);
-    margin: 30px;
-}
-
-.new-description {
-    color: #a12c2c;
-    font-size: 16px;
-}
-
-.new-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 40px;
-}
-
+    margin: 30px; }
+    .new-section .new-article .new-description {
+      color: #702424;
+      font-size: 16px; }
+    .new-section .new-article .new-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      margin-top: 40px;
+      -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+      animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both; }
 
 /* Estilos para formularios */
-
 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: none;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(252, 86, 86, 0.5);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5); }
+  form h2 {
+    color: #a02c2c;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px; }
+  form .input-group {
+    width: 100%; }
+    form .input-group label {
+      display: block;
+      margin-bottom: 20px;
+      color: black; }
+    form .input-group input,
+    form .input-group textarea {
+      padding: 17px 25px;
+      margin-bottom: 20px;
+      background-color: beige;
+      border: 2px solid #a12c2c; }
+  form button {
+    background-color: #9e3939;
+    background-image: radial-gradient(circle, transparent 1%, #702424 1%);
+    background-size: 15000%;
+    background-position: center;
+    transition: background 0.8s;
+    padding: 10px 15px;
+    margin-top: 15px; }
+    form button:hover {
+      background-color: #e99797; }
+    form button:active {
+      background-color: #8f5656;
+      background-size: 100%;
+      transition: background 0s; }
+
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none; }
+  .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 90px;
+    box-sizing: border-box;
+    background-color: rgba(233, 94, 94, 0.397);
+    z-index: 999; }
+    .menu .menu-icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: none;
+      align-items: center;
+      flex-wrap: none;
+      padding: 8px; }
+  .navbar .nav-link {
+    padding: 8px;
+    font-size: 16px;
+    color: #000000; }
+  .navbar label {
+    display: inline-flex;
+    color: #a81f1f;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 10px; }
+  #toggle:checked ~ .menu {
+    height: 250%; }
+  #toggle:checked ~ label {
+    display: inline-flex; }
+  .container {
+    padding: 0 20px; }
+  .image-container img {
+    max-width: 100%;
+    width: 20%;
+    height: auto; }
+  .title {
+    font-size: 16px; }
+  .text {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-wrap: none;
     padding: 50px;
-    box-shadow: 0 0 20px rgba(252, 86, 86, 0.5);
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(224, 215, 215, 0.5);
+    width: 90%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-form h2 {
-    color: hsl(0, 57%, 40%);
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 40px;
-    margin-top: 10px;
-}
-
-.input-group {
+    background-color: rgba(88, 44, 44, 0.301);
+    margin: 30px; }
+  .social-media img {
+    width: 30px;
+    height: 30px; }
+  /* Ajustes para temporadas */
+  .season-info iframe {
     width: 100%;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 10px;
-    color: #000000;
-}
-
-input,
-textarea {
-    padding: 17px 25px;
-    margin-bottom: 20px;
-    background-color: beige;
-    border: 2px solid#a12c2c
-}
-
-
-/* Estilos para 768px */
-
-
-@media screen and (max-width: 768px) {
-
-    #toggle {
-        display: none;
-    }
-
-    .menu {
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-        position: absolute;
-        top: 90px;
-        box-sizing: border-box;
-        background-color: rgba(233, 94, 94, 0.397);
-        z-index: 999;
-    }
-
-    .menu .menu-icons {
-        flex-direction: column;
-        align-items: center;
-        padding: 8px;
-    }
-
-    .navbar .nav-link {
-        padding: 8px;
-        font-size: 18px;
-        color: #000000;
-
-    }
-
-    .navbar label {
-        display: inline-flex;
-        color: #ad2828;
-        cursor: pointer;
-        position: absolute;
-        top: 25px;
-        right: 10px;
-    }
-
-    #toggle:checked~.menu {
-        height: 250%;
-    }
-
-    #toggle:checked~label {
-        display: inline-flex;
-    }
-
-
-    .container {
-        padding: 0 20px;
-    }
-
-    .image-container img {
-        max-width: 100%;
-        width: 20%;
-        height: auto;
-    }
-
-    .title {
-        font-size: 18px;
-
-    }
-
-    .text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 50px;
-        box-shadow: 0 0 20px rgba(224, 215, 215, 0.5);
-        width: 90%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: rgba(88, 44, 44, 0.301);
-        margin: 30px;
-    }
-
-    .social-media img {
-        width: 30px;
-        height: 30px;
-    }
-
-    /* Ajustes para temporadas */
-    .season-info iframe {
-        width: 100%;
-        height: 200px;
-    }
-
-    /* Ajustes para la sección de noticias */
-    .new-title {
-        font-size: 24px;
-    }
-
-    .new-subtitle {
-        font-size: 20px;
-    }
-
-    .new-article {
-        padding: 10px;
-    }
-
-    .new-image {
-        margin-top: 20px;
-    }
-
-    /* Ajustes para productos y merchandising */
-
-    .card {
-        width: 14rem;
-    }
-
-    /* Ajustes para formularios */
-    form {
-        width: 100%;
-        margin: 0 auto;
-        /* Centrar horizontalmente el formulario */
-        padding: 40px;
-    }
-
+    height: 200px; }
+  /* Ajustes para la sección de noticias */
+  .new-title, .new-section .new-article .new-subtitle {
+    font-size: 20px; }
+  .new-subtitle {
+    font-size: 16px; }
+  .new-article {
+    padding: 5px; }
+  .new-image {
+    margin-top: 20px; }
+  /* Ajustes para productos y merchandising */
+  .card {
+    width: 14rem; }
+  /* Ajustes para formularios */
+  form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px; }
     form h2 {
-        font-size: 18px;
-        text-align: center;
-        /* Centrar el título */
-        margin-bottom: 20px
-    }
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 20px; }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 15px 20px;
+      margin-bottom: 20px; } }
 
-    input,
-    textarea {
-        width: 100%;
-        /* Ancho completo */
-        padding: 15px 20px;
-        margin-bottom: 20px;
-
-    }
-}
-
-
-/* Estilos para 425px */
 @media screen and (max-width: 425px) {
-    #toggle {
-        display: none;
-    }
-
-    .menu {
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-        position: absolute;
-        top: 90px;
-        box-sizing: border-box;
-        background-color: rgba(233, 94, 94, 0.397);
-        z-index: 999;
-    }
-
-    .menu .menu-icons {
-        flex-direction: column;
-        align-items: center;
-        padding: 8px;
-    }
-
-    .navbar .nav-link {
-        padding: 8px;
-        font-size: 18px;
-        color: #000000;
-
-    }
-
-    .navbar label {
-        display: inline-flex;
-        color: #ad2828;
-        cursor: pointer;
-        position: absolute;
-        top: 25px;
-        right: 10px;
-    }
-
-    #toggle:checked~.menu {
-        height: 250%;
-    }
-
-    #toggle:checked~label {
-        display: inline-flex;
-    }
-
-    /* Ajustes para temporadas */
-
-    .trailer-title {
-        font-size: 18px;
-        margin-bottom: 20px;
-        margin-top: 10px;
-    }
-
-    .season-info {
-        margin-top: 20px;
-    }
-
+  #toggle {
+    display: none; }
+  .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 90px;
+    box-sizing: border-box;
+    background-color: rgba(233, 94, 94, 0.397);
+    z-index: 999; }
+  .menu .menu-icons {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px; }
+  .navbar .nav-link {
+    padding: 8px;
+    font-size: 16px;
+    color: black; }
+  .navbar label {
+    display: inline-flex;
+    color: #a81f1f;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 10px; }
+  #toggle:checked ~ .menu {
+    height: 250%; }
+  #toggle:checked ~ label {
+    display: inline-flex; }
+  /* Ajustes para temporadas */
+  .trailer-title, .sub-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px; }
+  .season-info {
+    margin-top: 20px; }
     .season-info iframe {
-        width: 100%;
-        height: 200px;
-        margin-top: 8px;
-    }
-
-    .video-info {
-        margin-top: 10px;
-    }
-
-    .sub-title {
-        font-size: 16px;
-        margin-top: 10px;
-    }
-
+      width: 100%;
+      height: 200px;
+      margin-top: 8px; }
+    .season-info .video-info {
+      margin-top: 10px; }
+    .season-info .sub-title {
+      font-size: 14px;
+      margin-top: 10px; }
     .season-info p {
-        font-size: 14px;
-        line-height: 1;
-        margin-top: 20px;
-    }
-
-    /* Estilos para personajes */
-
-    .section-principal {
-        height: 50px;
-        font-size: 12px;
-    }
-
-    .section-dos h2 {
-        font-size: 16px;
-        margin-top: 10px;
-    }
-
-    .section-dos .galeria {
-        margin: 10px;
-    }
-
-    .section-dos .galeria img {
-        height: 150px;
-    }
-
-    .character-title {
-        padding: 0;
-        margin: 0;
-        font-size: 14px;
-    }
-
-    .section-monstruos h2 {
-        margin-bottom: 20px;
-        margin-top: 20px;
-        font-size: 16px;
-    }
-
-    /* Estilos para productos y merchandising */
-
-    .d-flex {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: calc(100% - 2rem);
-        margin-bottom: 10px;
-    }
-
-    /* Estilos para formularios */
-
-    form {
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 20px; }
+  /* Estilos para personajes */
+  .section-principal {
+    height: 50px;
+    font-size: 12px; }
+  .section-dos h2 {
+    font-size: 16px;
+    margin-top: 10px; }
+  .section-dos .galeria {
+    margin: 10px; }
+    .section-dos .galeria .img-container {
+      position: relative; }
+      .section-dos .galeria .img-container img {
         width: 100%;
-        margin: 10px;
-        padding: 50px;
-
-    }
-
+        height: 150px;
+        object-fit: cover; }
+    .section-dos .galeria .character-title {
+      padding: 0px;
+      margin: 0;
+      font-size: 14px; }
+  .section-monstruos h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 14px; }
+  /* Estilos para productos y merchandising */
+  .d-flex {
+    flex-direction: column;
+    align-items: center; }
+  .card {
+    width: calc(100% - 2rem);
+    margin-bottom: 10px; }
+  /* Estilos para formularios */
+  form {
+    width: 100%;
+    margin: 10px;
+    padding: 50px; }
     form h2 {
-        font-size: 18px;
-    }
-
-    input,
-    textarea {
-        padding: 17px 20px;
-        margin-bottom: 20px;
-        background-color: beige;
-        border: 2px solid#a12c2c
-    }
-
-}
-
-/* Estilos para 375px */
+      font-size: 16px; }
+    form input,
+    form textarea {
+      padding: 17px 20px;
+      margin-bottom: 20px;
+      background-color: beige;
+      border: 2px solid #a12c2c; } }
 
 @media screen and (max-width: 375px) {
-    .text {
-        font-size: 16px;
-        line-height: 1.3;
-        text-align: center;
-        margin: 35px;
-        width: 80%;
-    }
-
-    /* Estilos para personajes */
-    .character-container .character p {
-        font-size: 12px;
-    }
-
-    /* Estilos para formularios */
-
-    form {
-        width: 90%;
-        margin: 20px;
-        padding: 50px;
-
-    }
-
+  .text {
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+    margin: 35px;
+    width: 80%; }
+  /* Estilos para personajes */
+  .character-container .character p {
+    font-size: 12px; }
+  /* Estilos para formularios */
+  form {
+    width: 90%;
+    margin: 20px;
+    padding: 50px; }
     form h2 {
-        font-size: 18px;
-    }
-
-    input,
-    textarea {
-        font-size: 10px;
-    }
-}
-
-/* Estilos para 320px */
+      font-size: 16px; }
+    form input,
+    form textarea {
+      font-size: 12px; } }
 
 @media screen and (max-width: 320px) {
-
-    /* Estilos para formularios */
-    .section-principal {
-        height: 30px;
-        font-size: 10px;
-    }
-
-    .section-dos h2 {
-        font-size: 15px;
-        margin-top: 5px;
-    }
-
-    .section-dos .galeria {
-        margin: 8px;
-    }
-
+  /* Estilos para formularios */
+  .section-principal {
+    height: 30px;
+    font-size: 12px; }
+  .section-dos h2 {
+    font-size: 14px;
+    margin-top: 5px; }
+  .section-dos .galeria {
+    margin: 8px; }
     .section-dos .galeria img {
-        height: 125px;
-    }
-
-    .character-title {
-        font-size: 10px;
-    }
-
-    .section-monstruos h2 {
-        margin-bottom: 10px;
-        margin-top: 10px;
-        font-size: 15px;
-    }
-
-
-
-    form {
-        width: 90%;
-        margin: 15px;
-        padding: 50px;
-    }
-}
+      height: 125px; }
+    .section-dos .galeria .character-title {
+      font-size: 12px; }
+  .section-monstruos h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 12px; }
+  form {
+    width: 90%;
+    margin: 15px;
+    padding: 50px; } }

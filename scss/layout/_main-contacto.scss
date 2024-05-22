@@ -1,0 +1,59 @@
+/* Estilos para formularios */
+form {
+  @include flex(column, center, center, none);
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(252, 86, 86, 0.5);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  h2 {
+    color: map-get($color, color6);
+    font-size: map-get($fuentes, L);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .input-group {
+    width: 100%;
+
+    label {
+      display: block;
+      margin-bottom: 20px;
+      color: map-get($color, color2);
+    }
+
+    input,
+    textarea {
+      padding: 17px 25px;
+      margin-bottom: 20px;
+      background-color: map-get($color, color7);
+      border: 2px solid #a12c2c;
+    }
+  }
+
+  button {
+    background-color: #9e3939;
+    background-image: radial-gradient(circle, transparent 1%, rgb(112, 36, 36) 1%);
+    background-size: 15000%;
+    background-position: center;
+    transition: background 0.8s;
+
+    padding: 10px 15px;
+    margin-top: 15px;
+    &:hover {
+      background-color: rgb(233, 151, 151);
+    }
+
+    &:active {
+      background-color: #8f5656;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+}  

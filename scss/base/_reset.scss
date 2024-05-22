@@ -1,0 +1,19 @@
+/* Estilos generales */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+
+    .nav-link {
+        color: map-get($color, color5) !important;
+    }
+
+    .text-body-secondary {
+        color: map-get($color, color5) !important;
+    }
+}

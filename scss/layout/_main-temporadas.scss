@@ -1,0 +1,45 @@
+/* Estilos para temporadas*/
+
+.season {
+    margin: 20px;
+}
+
+.trailer-title {
+    color: map-get($color, color3);
+    font-size: map-get($fuentes, L);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 55px;
+}
+
+.season-info {
+    @include flex(none, center, none, wrap);
+    margin-bottom: 40px;
+    margin-top: 55px;
+
+    iframe {
+        display: block;
+        margin: 50px;
+        width: 400px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+.video-info {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sub-title {
+    @extend .trailer-title
+}
+
+.season-info p {
+    color: map-get($color, color3);
+    font-size: map-get($fuentes, S);
+    line-height: 1.6;
+    margin-top: 55px;
+}

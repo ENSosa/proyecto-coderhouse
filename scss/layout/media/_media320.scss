@@ -1,0 +1,41 @@
+@media screen and (max-width: 320px) {
+
+    /* Estilos para formularios */
+    .section-principal {
+        height: 30px;
+        font-size: map-get($fuentes, XXS);
+    }
+
+    .section-dos {
+        h2 {
+            font-size: map-get($fuentes, XS);
+            margin-top: 5px;
+        }
+
+        .galeria {
+            margin: 8px;
+
+            img {
+                height: 125px;
+            }
+
+            .character-title {
+                font-size: map-get($fuentes, XXS);
+            }
+        }
+    }
+
+    .section-monstruos {
+        h2 {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-size: map-get($fuentes, XXS);
+        }
+    }
+
+    form {
+        width: 90%;
+        margin: 15px;
+        padding: 50px;
+    }
+}
