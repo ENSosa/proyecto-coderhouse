@@ -12,7 +12,9 @@
 }
 
 .title {
-    color: map-get($color, color3);
+    font-family: 'Agency FB', sans-serif;
+    color: rgb(241, 239, 239);
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.925);
     font-size: map-get($fuentes, M);
     font-weight: bold;
     text-align: center;
@@ -22,10 +24,56 @@
 }
 
 .text {
-    color: map-get($color, color4);
-    font-size: map-get($fuentes, S);
+    font-family: 'ITC Benguiat', serif;
+    color: rgb(129, 129, 129);
+    text-shadow: 4px 2px 4px rgba(226, 42, 42, 0.925);
+    font-size: map-get($fuentes, M);
     line-height: 1.9;
     text-align: center;
     margin: auto;
     width: 80%;
+
+}
+
+.title-premio {
+    @extend .title
+}
+
+.table-container {
+    margin: 0 auto;
+    width: 80%;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-top: 55px;
+
+    table {
+        color: map-get($color, color7);
+        font-size: map-get($fuentes, S);
+        table-layout: fixed;
+        border-collapse: collapse;
+
+        thead {
+            background-color: rgb(168, 31, 31);
+
+            th {
+                padding: 20px 15px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: solid 1px rgb(105, 97, 97);
+        }
+
+        tbody tr {
+            cursor: pointer;
+        }
+
+        tbody tr:hover {
+            background-color: rgba(204, 58, 58, 0.671);
+        }
+    }
 }

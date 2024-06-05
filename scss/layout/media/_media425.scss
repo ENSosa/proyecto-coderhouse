@@ -43,6 +43,22 @@
         display: inline-flex;
     }
 
+    .table-container {
+        width: 85%;
+        padding: 10px;
+        margin-bottom: 20px;
+        margin-top: 40px;
+
+        table {
+            font-size: map-get($fuentes, XS);
+
+            td {
+                padding: 10px;
+            }
+
+        }
+    }
+
     /* Ajustes para temporadas */
     .trailer-title {
         font-size: map-get($fuentes, S);

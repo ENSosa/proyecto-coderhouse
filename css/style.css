@@ -31,7 +31,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'ITC Benguiat', serif; }
 
 footer {
   background-color: black;
@@ -92,8 +93,11 @@ body {
     width: 25%;
     margin: 0 5px; }
 
-.title {
-  color: #9b2222;
+.title, .title-premio {
+  /*color: map-get($color, color7);*/
+  font-family: 'Agency FB', sans-serif;
+  color: #f1efef;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.925);
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -102,12 +106,40 @@ body {
   margin-top: 55px; }
 
 .text {
-  color: #702424;
-  font-size: 16px;
+  font-family: 'ITC Benguiat', serif;
+  color: #818181;
+  text-shadow: 4px 2px 4px rgba(226, 42, 42, 0.925);
+  font-size: 20px;
   line-height: 1.9;
   text-align: center;
   margin: auto;
   width: 80%; }
+
+.table-container {
+  margin: 0 auto;
+  width: 80%;
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin-bottom: 40px;
+  margin-top: 55px; }
+  .table-container table {
+    color: beige;
+    font-size: 16px;
+    table-layout: fixed;
+    border-collapse: collapse; }
+    .table-container table thead {
+      background-color: #a81f1f; }
+      .table-container table thead th {
+        padding: 20px 15px;
+        font-weight: 700;
+        text-transform: uppercase; }
+    .table-container table td {
+      padding: 15px;
+      border-bottom: solid 1px #696161; }
+    .table-container table tbody tr {
+      cursor: pointer; }
+    .table-container table tbody tr:hover {
+      background-color: rgba(204, 58, 58, 0.671); }
 
 /* Estilos para temporadas*/
 .season {
@@ -369,7 +401,7 @@ form {
     max-width: 100%;
     width: 20%;
     height: auto; }
-  .title {
+  .title, .title-premio {
     font-size: 16px; }
   .text {
     display: flex;
@@ -450,6 +482,15 @@ form {
     height: 250%; }
   #toggle:checked ~ label {
     display: inline-flex; }
+  .table-container {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 40px; }
+    .table-container table {
+      font-size: 14px; }
+      .table-container table td {
+        padding: 10px; }
   /* Ajustes para temporadas */
   .trailer-title, .sub-title {
     font-size: 16px;
@@ -536,6 +577,17 @@ form {
       font-size: 12px; } }
 
 @media screen and (max-width: 320px) {
+  .table-container {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px; }
+    .table-container table {
+      font-size: 14px; }
+      .table-container table thead th {
+        padding: 10px 15px; }
+      .table-container table td {
+        padding: 5px; }
   /* Estilos para formularios */
   .section-principal {
     height: 30px;

@@ -1,4 +1,26 @@
 @media screen and (max-width: 320px) {
+    .table-container {
+        width: 90%;
+        padding: 10px; 
+        margin-bottom: 10px;
+        margin-top: 20px;
+
+        table {
+            font-size: map-get($fuentes, XS);
+
+            thead {
+
+                th {
+                    padding: 10px 15px;
+                }
+            }
+
+            td {
+                padding: 5px;
+            }
+
+        }
+    }
 
     /* Estilos para formularios */
     .section-principal {
